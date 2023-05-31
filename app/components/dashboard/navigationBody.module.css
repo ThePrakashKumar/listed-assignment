@@ -1,0 +1,21 @@
+.navigationBodyContainer {
+  width: 20%;
+  background-color: var(--main-text-color);
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 6rem 0 5rem 5rem;
+}
+.brand {
+  margin-bottom: 2rem;
+}
+
+.bottomLinkContainer {
+  position: absolute;
+  bottom: 0;
+}
+
+.bottomLinkContainer p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
