@@ -1,0 +1,31 @@
+.dashboardCardContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 22.1rem;
+  height: 12rem;
+  border-radius: 20px;
+  padding: 20px 25px;
+}
+
+.icon {
+  align-self: flex-end;
+}
+
+.cardText {
+  font-size: 1.4rem;
+}
+
+.cardNumber {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.greenCard {
+  background: var(--light-green);
+}
