@@ -1,0 +1,120 @@
+.signInContainer {
+  display: flex;
+}
+
+.signInLeftContainer {
+  width: 40%;
+  color: #ffffff;
+  background: var(--main-text-color);
+  font-size: 7.2rem;
+  font-weight: 700;
+  letter-spacing: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signInRightContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 3.6rem;
+}
+
+.subTitle {
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.oauthButton {
+  background: #ffffff;
+  border-radius: 10px;
+  height: 3rem;
+  border: none;
+  padding: 8px 19px 7px 19px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  display: flex;
+  cursor: pointer;
+}
+
+.oauthButtonIcon {
+  margin-right: 1.2rem;
+}
+
+.credentialContainer {
+  background: #ffffff;
+  width: 38.5rem;
+  height: 31.7rem;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.label {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.input {
+  height: 4rem;
+  width: 32.5rem;
+  border-radius: 10px;
+  background: #f5f5f5;
+  border: none;
+  padding: 10px 0 11px 15px;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 19px;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.link {
+  color: #346bd5;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.button {
+  background: #000000;
+  border-radius: 10px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  padding: 9px 0;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.signUpText {
+  color: var(--light-gray);
+  text-align: center;
+  margin-top: 20px;
+}
