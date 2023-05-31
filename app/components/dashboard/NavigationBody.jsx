@@ -1,4 +1,4 @@
-import styles from "./navigationBody.module.css";
+import styles from "./NavigationBody.module.css";
 import Navigator from "./Navigator";
 const Navigation = () => {
   return (

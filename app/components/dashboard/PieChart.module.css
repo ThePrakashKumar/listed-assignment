@@ -1,0 +1,82 @@
+.pieChartContainer {
+  padding: 20px 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 48rem;
+  height: 24rem;
+  width: 48%;
+}
+
+.pieChartHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+.select {
+  background: #ffffff;
+  border: none;
+  font-family: inherit;
+  color: var(--light-gray);
+}
+
+.option {
+  background: #ffffff;
+}
+
+.chartContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.6rem;
+}
+
+.chart {
+  width: 14.5rem;
+}
+
+.chartDetail {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+}
+
+.colorDot {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: pink;
+  margin-right: 10px;
+  align-self: start;
+}
+
+.colorDotGreen {
+  background: #98d89e;
+}
+.colorDotYellow {
+  background: #f6dc7d;
+}
+.colorDotRed {
+  background: #ee8484;
+}
+
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+}
+.detailTitle {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+.percent {
+  font-size: 1.4rem;
+  margin-bottom: 2.1rem;
+  color: var(--light-gray);
+}

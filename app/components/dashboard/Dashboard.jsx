@@ -1,4 +1,4 @@
-import styles from "./dashboard.module.css";
+import styles from "./Dashboard.module.css";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "../../api/auth/[...nextauth]/route";

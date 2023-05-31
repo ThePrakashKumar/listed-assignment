@@ -1,4 +1,4 @@
-import styles from "./navigator.module.css";
+import styles from "./Navigator.module.css";
 const Navigator = () => {
   return (
     <div className={styles.navigatorContainer}>

@@ -1,5 +1,5 @@
 .dashboardContainer {
   background: var(--main-background);
-  padding: 4rem;
+  padding: 2rem 4rem;
   display: flex;
 }

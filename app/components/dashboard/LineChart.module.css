@@ -1,0 +1,58 @@
+.lineChartContainer {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 2rem;
+  margin-bottom: 1rem;
+  max-height: 36rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.lineChartHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.select {
+  background: #ffffff;
+  border: none;
+  font-family: inherit;
+  color: var(--light-gray);
+}
+
+.option {
+  background: #ffffff;
+}
+
+.labels {
+  display: flex;
+}
+
+.label {
+  margin-right: 2rem;
+}
+
+.labelDot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 1.05rem;
+}
+
+.labelDotRed {
+  background: #e9a0a0;
+}
+
+.labelDotGreen {
+  background: #9bdd7c;
+}
+
+.labelText {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-right: 2rem;
+}
