@@ -30,3 +30,12 @@
 .greenCard {
   background: var(--light-green);
 }
+.yellowCard {
+  background: var(--light-yellow);
+}
+.pinkCard {
+  background: var(--light-pink);
+}
+.blueCard {
+  background: var(--light-blue);
+}

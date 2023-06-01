@@ -2,10 +2,12 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const data = {
-    totalRevenues: "$2,129,430",
-    totalTransaction: "1,520",
-    totalLikes: "9,721",
-    totalUsers: "892",
+    cardData: {
+      totalRevenues: "$2,129,430",
+      totalTransaction: "1,520",
+      totalLikes: "9,721",
+      totalUsers: "892",
+    },
     lineChart: [
       {
         duration: "May-June 2021",

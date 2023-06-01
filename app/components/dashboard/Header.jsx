@@ -1,5 +1,8 @@
+"use client";
+import { useSession } from "next-auth/react";
 import styles from "./Header.module.css";
 const Header = () => {
+  const { data: session } = useSession();
   return (
     <div className={styles.header}>
       <span className={styles.title}>Dashboard</span>
@@ -24,7 +27,7 @@ const Header = () => {
         </svg>
       </span>
       <img
-        src="https://i.pravatar.cc/150?img=3"
+        src={session?.user.image || "https://i.pravatar.cc/150?img=3"}
         alt="profile-pix"
         className={styles.avatar}
       />

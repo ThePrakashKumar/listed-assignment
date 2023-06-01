@@ -2,6 +2,7 @@
 import styles from "./PieChart.module.css";
 
 import { Chart as ChartJS, ArcElement } from "chart.js";
+import { useState } from "react";
 import { Pie } from "react-chartjs-2";
 
 ChartJS.register(ArcElement);
@@ -16,13 +17,31 @@ const data = {
   ],
 };
 
-const PieChart = () => {
+const PieChart = ({ pieCartData }) => {
+  const [currentData, setCurrentData] = useState("May-June 2021");
+  const data = {
+    datasets: [
+      {
+        data: pieCartData.find((l) => l.duration === currentData).products,
+        backgroundColor: ["#EE8484", "#F6DC7D", "#98D89E"],
+        borderWidth: 0,
+      },
+    ],
+  };
   return (
     <div className={styles.pieChartContainer}>
       <div className={styles.pieChartHeader}>
         <span className={styles.title}>Top products</span>
-        <select className={styles.select}>
-          <option className={styles.option}>May-June 2021</option>
+        <select
+          className={styles.select}
+          value={currentData}
+          onChange={(e) => setCurrentData(e.target.value)}
+        >
+          {pieCartData.map((d) => (
+            <option className={styles.option} value={d.duration}>
+              {d.duration}
+            </option>
+          ))}
         </select>
       </div>
       <div className={styles.chartContainer}>
@@ -38,7 +57,12 @@ const PieChart = () => {
             </div>
             <div className={styles.rightContainer}>
               <span className={styles.detailTitle}>Basic Tees</span>
-              <span className={styles.percent}>55%</span>
+              <span className={styles.percent}>
+                {`${
+                  pieCartData.find((l) => l.duration === currentData)
+                    .products[2]
+                }%`}
+              </span>
             </div>
             <div className={styles.leftContainer}>
               <span
@@ -47,7 +71,12 @@ const PieChart = () => {
             </div>
             <div className={styles.rightContainer}>
               <span className={styles.detailTitle}>Custom Short Pants</span>
-              <span className={styles.percent}>31%</span>
+              <span className={styles.percent}>
+                {`${
+                  pieCartData.find((l) => l.duration === currentData)
+                    .products[1]
+                }%`}
+              </span>
             </div>
             <div className={styles.leftContainer}>
               <span
@@ -56,7 +85,12 @@ const PieChart = () => {
             </div>
             <div className={styles.rightContainer}>
               <span className={styles.detailTitle}>Super Hoodies</span>
-              <span className={styles.percent}>14%</span>
+              <span className={styles.percent}>
+                {`${
+                  pieCartData.find((l) => l.duration === currentData)
+                    .products[0]
+                }%`}
+              </span>
             </div>
           </div>
         </div>

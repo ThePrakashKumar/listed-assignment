@@ -7,12 +7,12 @@ import {
   PointElement,
   LineElement,
 } from "chart.js";
+import { useState } from "react";
 
 import { Line } from "react-chartjs-2";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement);
-
-export const data = {
+const data = {
   labels: ["", "Week1", "Week2", "Week3", "Week4", ""],
   datasets: [
     {
@@ -32,7 +32,7 @@ export const data = {
   ],
 };
 
-export const options = {
+const options = {
   responsive: true,
   maintainAspectRatio: false,
   scales: {
@@ -62,13 +62,42 @@ export const options = {
     },
   },
 };
-const LineChart = () => {
+const LineChart = ({ lineChartData }) => {
+  const [currentData, setCurrentData] = useState("May-June 2021");
+
+  const data = {
+    labels: ["", "Week1", "Week2", "Week3", "Week4", ""],
+    datasets: [
+      {
+        data: lineChartData.find((l) => l.duration === currentData).guest,
+        fill: false,
+        borderColor: "#E9A0A0",
+        tension: 0.4,
+        pointRadius: 0,
+      },
+      {
+        data: lineChartData.find((l) => l.duration === currentData).user,
+        fill: false,
+        borderColor: "#9BDD7C",
+        tension: 0.4,
+        pointRadius: 0,
+      },
+    ],
+  };
   return (
     <div className={styles.lineChartContainer}>
       <div className={styles.title}>Activities</div>
       <div className={styles.lineChartHeader}>
-        <select className={styles.select}>
-          <option className={styles.option}>May-June 2021</option>
+        <select
+          className={styles.select}
+          value={currentData}
+          onChange={(e) => setCurrentData(e.target.value)}
+        >
+          {lineChartData.map((d) => (
+            <option className={styles.option} value={d.duration}>
+              {d.duration}
+            </option>
+          ))}
         </select>
         <div className={styles.labels}>
           <div className={styles.label}>
